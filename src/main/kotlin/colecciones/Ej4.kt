@@ -1,17 +1,10 @@
 package org.ies.tierno.colecciones
 
-fun sum(list: List<Int>): List<Int> {
-    val newlist = mutableListOf<Int>()
+fun sum(list: List<Int>): List<Int> =
+    list.map { it + 10 }
 
-    for (number in list) {
-        number + 10
 
-        newlist.add(number)
-
-    }
-    return newlist
-}
-
-fun main(){
-
+fun main() {
+    val list = listOf(4, 78, 46, 32, 25)
+    println(sum(list))
 }
